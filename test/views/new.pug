@@ -1,0 +1,23 @@
+html
+    head
+        meta(charset='utf-8')
+        title 목록보기
+    
+    body
+        h1 Server Side Javascript
+        ul
+            each topic in docs
+                a(href='/subject/'+topic)
+                    li=topic
+        article
+            h1 Welcome
+            p hello javascript for server
+            a(href='/subject/new') new
+        div    
+            form(method="post" action="/subject/new" id="")
+                p
+                    input(type="text" name="title" placeholder="title")
+                p
+                    textarea(name="desc" placeholder="description")
+                p    
+                    input(type="submit" value="제출")

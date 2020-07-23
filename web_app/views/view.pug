@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title view
+    body
+        div
+            h1 Server Side Javascript
+            ul
+                -for(var i=0; i<_result.length; i++)
+                    a(href='/sss/'+_result[i])
+                        li=_result[i]
+        div
+            form(method="post" action="/sss/new")
+            p
+                input(type="text" name="title" placeholder="title")
+            p
+                textarea(name="desc" placeholder="description")
+            p
+                input(type="submit" value="등록하기")
